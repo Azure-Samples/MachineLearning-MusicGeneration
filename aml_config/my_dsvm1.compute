@@ -1,0 +1,8 @@
+address: 52.183.62.185
+baseDockerImage: microsoft/mmlspark:plus-gpu-0.7.91
+nvidiaDocker: true
+nativeSharedDirectory: ~/.azureml/share/
+password: <THIS WILL BE GENERATED>
+sharedVolumes: true
+type: remotedocker
+username: <YOUR DSVM USERNAME>
