@@ -12,7 +12,7 @@ az ml computetarget attach --name "my_dsvm" --address "my_dsvm_ip_address" --use
 ### Configure my_dsvm.compute
 ```
 baseDockerImage: microsoft/mmlspark:plus-gpu-0.7.91
-  nvidiaDocker: true
+nvidiaDocker: true
 ```
 ### Configure my_dsvm.runconfig
 To push models to Azure Blob Storage, add your storage account details to your .runconfig file:
@@ -46,7 +46,6 @@ az ml experiment submit -c my_dsvm MusicGeneration/train.py
 
 ```
 az ml experiment submit -c my_dsvm MusicGeneration/score.py
-
 ```
 
 ## Data Credit
