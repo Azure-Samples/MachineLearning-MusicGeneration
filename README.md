@@ -1,14 +1,54 @@
 
-# Contributing
+# Music Generation with Azure Machine Learning
 
-This project welcomes contributions and suggestions.  Most contributions require you to agree to a
-Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
-the rights to use your contribution. For details, visit https://cla.microsoft.com.
+Sequence-to-Sequence model using multi-layered LSTM for music generation. For more detaield walkthrough see: <ADD BLOG LINK>
 
-When you submit a pull request, a CLA-bot will automatically determine whether you need to provide
-a CLA and decorate the PR appropriately (e.g., label, comment). Simply follow the instructions
-provided by the bot. You will only need to do this once across all repos using our CLA.
+## Setup compute environment
 
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
-For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
-contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+### Setup remote VM as execution target
+```
+az ml computetarget attach --name "my_dsvm" --address "my_dsvm_ip_address" --username "my_name" --password "my_password" --type remotedocker
+```
+### Configure my_dsvm.compute
+```
+baseDockerImage: microsoft/mmlspark:plus-gpu-0.7.91
+  nvidiaDocker: true
+```
+### Configure my_dsvm.runconfig
+To push models to Azure Blob Storage, add your storage account details to your .runconfig file:
+
+```
+EnvironmentVariables:
+  "STORAGE_ACCOUNT_NAME": "<YOUR_AZURE_STORAGE_ACCOUNT_NAME>"
+  "STORAGE_ACCOUNT_KEY": "<YOUR_AZURE_STORAGE_ACCOUNT_KEY>"
+Framework: Python
+```
+
+For more info on Azure ML Workbench compute targets see[documentation](https://docs.microsoft.com/en-us/azure/machine-learning/preview/how-to-create-dsvm-hdi).
+
+## Train
+
+To train your own model using a DSVM compte target
+
+### Prepare compute environment
+
+```
+az ml experiment -c prepare my_dsvm
+```
+
+### Run the experiment
+
+```
+az ml experiment submit -c my_dsvm MusicGeneration/train.py
+```
+
+## Generate Music (Predict)
+
+```
+az ml experiment submit -c my_dsvm MusicGeneration/score.py
+
+```
+
+## Data Credit
+
+The dataset used for the experiments is available at (http://www.feelyoursound.com/scale-chords/)
