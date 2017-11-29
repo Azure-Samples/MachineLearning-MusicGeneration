@@ -1,8 +1,7 @@
 
 # Music Generation with Azure Machine Learning
 
-Sequence-to-Sequence model using multi-layered LSTM for music generation. For more detaield walkthrough see: <ADD BLOG LINK>
-
+Sequence-to-Sequence model using multi-layered LSTM for music generation. For more detaield walkthrough see: add blog link
 ## Setup compute environment
 
 ### Setup remote VM as execution target
@@ -24,7 +23,7 @@ EnvironmentVariables:
 Framework: Python
 ```
 
-For more info on Azure ML Workbench compute targets see[documentation](https://docs.microsoft.com/en-us/azure/machine-learning/preview/how-to-create-dsvm-hdi).
+For more info on Azure ML Workbench compute targets see [documentation](https://docs.microsoft.com/en-us/azure/machine-learning/preview/how-to-create-dsvm-hdi).
 
 ## Train
 
