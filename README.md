@@ -5,7 +5,22 @@ Sequence-to-Sequence model using multi-layered LSTM for music generation. For mo
 
 ## Prerequisites
 
-### Make sure that you have properly installed [Azure Machine Learning Workbench](https://docs.microsoft.com/en-us/azure/machine-learning/preview/overview-what-is-azure-ml) by following the [Install and create Quickstart](https://docs.microsoft.com/en-us/azure/machine-learning/preview/quickstart-installation)
+The prerequisites to run this example are as follows:
+
+1. Make sure that you have properly installed [Azure Machine Learning Workbench](https://docs.microsoft.com/en-us/azure/machine-learning/preview/overview-what-is-azure-ml) by following the [Install and create Quickstart](https://docs.microsoft.com/en-us/azure/machine-learning/preview/quickstart-installation)
+
+2. This example could be run on any compute context. However, it is recommended to run it on a GPU machine to accelerate the training process.
+
+3. Access to an Azure Blob Storage Account. See how to create and manage your storage account [here](https://docs.microsoft.com/en-us/azure/storage/common/storage-create-storage-account?toc=%2fazure%2fstorage%2fblobs%2ftoc.json)
+
+## Create a new Workbench project
+
+1. Clone this repo to your local machine to /MachineLearning-MusicGeneration
+2. Open Azure Machine Learning Workbench
+3. On the Projects page, click the + sign and select Add Existing Folder as Project
+4. Delete the .git folder in the cloned repo as Azure Machine Learning Workbench currently cannot import projects that contain a git repo
+4. In the Add Existing Folder as Project pane, set the project directory to the location where this repo has been cloned and fill in the information for your new project
+5. Click Create
 
 ## Setup compute environment
 
