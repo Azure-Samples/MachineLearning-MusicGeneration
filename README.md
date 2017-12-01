@@ -1,7 +1,7 @@
 
 # Music Generation with Azure Machine Learning
 
-Sequence-to-Sequence model using multi-layered LSTM for music generation. For more detaield walkthrough see: add blog link
+Sequence-to-Sequence model using multi-layered LSTM for music generation. For more detailed walkthrough see: add blog link
 ## Setup compute environment
 
 ### Setup remote VM as execution target
