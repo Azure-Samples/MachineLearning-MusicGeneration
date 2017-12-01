@@ -2,6 +2,11 @@
 # Music Generation with Azure Machine Learning
 
 Sequence-to-Sequence model using multi-layered LSTM for music generation. For more detailed walkthrough see: add blog link
+
+## Prerequisites
+
+### Make sure that you have properly installed [Azure Machine Learning Workbench](https://docs.microsoft.com/en-us/azure/machine-learning/preview/overview-what-is-azure-ml) by following the [Install and create Quickstart](https://docs.microsoft.com/en-us/azure/machine-learning/preview/quickstart-installation)
+
 ## Setup compute environment
 
 ### Setup remote VM as execution target
