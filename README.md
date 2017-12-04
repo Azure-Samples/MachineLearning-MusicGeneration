@@ -68,7 +68,7 @@ az ml experiment submit -c my_dsvm MusicGeneration/score.py
 ```
 ## Listen to your own music!
 
-The song generated in the previous step will be saved in your Blob Storage conatiner. You can listen to the song by downloading the file and playing it using any media player. eg: Windows Media Player
+The song generated in the previous step will be saved in your Blob Storage conatiner. You can listen to the song by downloading the .mid file and playing it using any standard media player like Windows Media Player for example.
 
 ## Data Credit
 
