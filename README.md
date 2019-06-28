@@ -1,6 +1,8 @@
 
 # Music Generation with Azure Machine Learning
 
+> **NOTE** This content is no longer maintained. Visit the [Azure Machine Learning Notebook](https://github.com/Azure/MachineLearningNotebooks) project for sample Jupyter notebooks for ML and deep learning with Azure Machine Learning.
+
 Sequence-to-Sequence model using multi-layered LSTM for music generation. For more detailed walkthrough see: [blog](https://blogs.technet.microsoft.com/machinelearning/2017/12/06/music-generation-with-azure-machine-learning/)
 
 ## Prerequisites
